@@ -1,0 +1,25 @@
+data/
+artifacts/
+logs/
+__pycache__/
+.ipynb_checkpoints/
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+# Ignore virtual environment directories
+venv/
+env/
+.venv/
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+# Ignore MLflow artifacts
+mlruns/
+mlflow.db
+# Ignore Great Expectations artifacts
+great_expectations/uncommitted/
+# Ignore VSCode settings
+.vscode/
+# Ignore PyCharm settings
+.idea/
+
+/data
