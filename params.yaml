@@ -1,0 +1,55 @@
+# -------------------------------
+# Data Configuration
+# -------------------------------
+data:
+  test_size: 0.2
+  random_state: 42
+  target_column: MedHouseVal
+
+
+# -------------------------------
+# Model Configuration
+# -------------------------------
+model:
+  name: RandomForestRegressor
+  n_estimators: 100
+  max_depth: 10
+  random_state: 42
+
+
+# -------------------------------
+# MLflow Configuration
+# -------------------------------
+mlflow:
+  tracking_uri: http://localhost:5000
+  experiment_name: house-price-prediction
+  registered_model_name: house-price-model
+
+
+# -------------------------------
+# Paths Configuration
+# -------------------------------
+paths:
+  raw_data: data/raw/housing.csv
+  train_data: data/processed/train.csv
+  test_data: data/processed/test.csv
+  model_dir: artifacts/models
+  reports_dir: artifacts/reports
+
+
+# -------------------------------
+# Drift Detection (future use)
+# -------------------------------
+drift:
+  reference_data: data/reference/train_reference.csv
+  current_data: data/current/current_batch.csv
+  report_path: artifacts/reports/drift_report.html
+
+
+# -------------------------------
+# API / Serving (future use)
+# -------------------------------
+api:
+  model_path: artifacts/models/model.pkl
+  host: 0.0.0.0
+  port: 8000
