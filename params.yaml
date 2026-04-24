@@ -24,6 +24,7 @@ mlflow:
   tracking_uri: http://localhost:5000
   experiment_name: house-price-prediction
   registered_model_name: house-price-model
+  model_uri: models:/house-price-model/Production
 
 
 # -------------------------------

@@ -1,0 +1,6 @@
+mlflow:
+  tracking_uri: http://mlflow:5000
+  model_uri: models:/house-price-model/Production
+
+api:
+  refresh_interval: 30  # in seconds faster refresh in production

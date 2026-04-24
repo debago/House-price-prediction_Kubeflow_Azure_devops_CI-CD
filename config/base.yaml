@@ -1,0 +1,15 @@
+data:
+  test_size: 0.2
+  random_state: 42
+  target_column: MedHouseVal
+
+model:
+  name: RandomForestRegressor
+  n_estimators: 100
+  max_depth: 10
+  random_state: 42
+
+mlflow:
+  experiment_name: house-price-prediction
+  registered_model_name: house-price-model
+

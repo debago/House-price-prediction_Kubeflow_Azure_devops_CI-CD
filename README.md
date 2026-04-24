@@ -46,23 +46,47 @@ house-price-mlops/
 
 # Local env setup:
 
+Check python:
+
+py -0
+py -0p
+py -3.11 -m venv .venv
+.venv/Scripts/Activate.ps1
+
+Remove-Item -Recurse -Force .\.venv; 
 python -m venv .venv
-.venv/Scripts/activate.ps1
-pip install -r requirements.txt
+python -m venv .venv
+.venv/Scripts/Activate.ps1
+python.exe -m pip install --upgrade pip
+pip install pip-tools
+pip install --no-cache-dir -r requirements.txt
 python.exe -m pip install --upgrade pip
 
-Python -m pip install --upgrade pip setuptools wheel
+Python -m pip install setuptools pip-tools
+Python -m pip install --upgrade pip setuptools wheel pip-tools
+python -c "import pkg_resources;print('ok')"
+.\.venv\Scripts\pip install --upgrade setuptools
 sleep 5    # This is to add Sleep of 5 seconds to ensure that pip, setuptools and wheel are upgraded before we run pip install pip-tools
-pip install pip-tools 
+python -m pip install pip-tools 
 sleep 5 # # This is to add Sleep of 5 seconds to ensure that pip-tools is installed before we run pip-compile
 pip-compile requirements.in  #this generates requirements.txt, then install requirements.txt
-pip install -r requirements.txt
+python -m piptools compile requirements.in (Alternate)
+python -m pip install --no-cache-dir -r requirements.txt
 
-to upgrade:
+python -m pip uninstall setuptools -y
+python -m pip install "setuptools<82"
+python -c "import pkg_resources;print('ok')"
+python -m pip show setuptools
+
+
+# To upgrade:
 
 pip-compile --upgrade-package <package-name> requirements.in
 pip-compile --upgrade-package scikit-learn requirements.in
+pip-compile --upgrade-package "protobuf<4.21" requirements.in
+pip-compile --upgrade-package "setuptools<82" requirements.in
 pip-compile --upgrade requirements.in
+
 
 
 # Now all py notebooks are ready inside src folder
@@ -80,6 +104,16 @@ First Connect to mlflow ui:
 
 mlflow ui --host localhost --port 5000
 python -m src.pipeline
+
+# Error:
+
+ModuleNotFoundError: No module named 'pkg_resources'
+
+python -m pip uninstall setuptools -y
+python -m pip install "setuptools<82"
+python -c "import pkg_resources;print('ok')"
+python -m pip show setuptools
+-------------------------
 
 Interpretation of metrics:
 
@@ -103,3 +137,7 @@ python -m great_expectations
 # data Versioning
 
 dvc init
+
+# Mlflow DB upgrade:
+
+mlflow db upgrade sqlite:///mlflow.db
