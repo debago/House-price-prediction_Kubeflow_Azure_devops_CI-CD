@@ -7,7 +7,7 @@ from src.config_loader import get_pipeline_config
 
 def evaluate():
     # 1️⃣ Load config
-    config = get_pipeline_config("pipeline")
+    config = get_pipeline_config()
 
     test_path = config["paths"]["test_data"]
     model_dir = config["paths"]["model_dir"]

@@ -1,9 +1,7 @@
 api:
-  name: House Price API
-  version: 1.0.0
   host: 0.0.0.0
   port: 8000
   refresh_interval: 60  # in seconds
 
 mlflow:
-  model_uri: models:/house-price-model@dev
+  model_uri: models:/house-price-model/Production
