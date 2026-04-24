@@ -1,19 +1,15 @@
 import pandas as pd
-from src.config_loader import get_pipeline_config
-from src.utils import load_config, load_data
-from src.config_loader import get_pipeline_config
+from src.utils import load_params, load_data
 import logging
-
 
 logger = logging.getLogger(__name__)
 
 
 def validate_data():
     logger.info("Validation Started")
-    # params = load_params()
-    config = get_pipeline_config()
-    raw_data_path = config["paths"]["raw_data"]
-    target_column = config["data"]["target_column"]
+    params = load_params()
+    raw_data_path = params["paths"]["raw_data"]
+    target_column = params["data"]["target_column"]
 
     df = load_data(raw_data_path)
 

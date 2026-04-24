@@ -1,0 +1,3 @@
+mlflow:
+  tracking_uri: http://mlflow-staging:5000
+  model_uri: models:/house-price-model/Staging

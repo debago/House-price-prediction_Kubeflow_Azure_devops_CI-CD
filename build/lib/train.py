@@ -4,8 +4,7 @@ import mlflow
 import mlflow.sklearn
 from sklearn.ensemble import RandomForestRegressor
 from mlflow.models import infer_signature
-from src.utils import load_config, load_data, ensure_dir
-from src.config_loader import get_pipeline_config
+from src.utils import load_params, load_data, ensure_dir
 import logging
 
 logger = logging.getLogger(__name__)
@@ -17,11 +16,11 @@ def train():
 
     logger.info("Training started")
     # 1️⃣ Load config
-    config = get_pipeline_config()
+    params = load_params()
 
-    train_path = config["paths"]["train_data"]
-    model_dir = config["paths"]["model_dir"]
-    target_column = config["data"]["target_column"]
+    train_path = params["paths"]["train_data"]
+    model_dir = params["paths"]["model_dir"]
+    target_column = params["data"]["target_column"]
 
     # 2️⃣ Load training data
     df = load_data(train_path)
@@ -30,14 +29,14 @@ def train():
 
     # 3️⃣ Initialize model
     model = RandomForestRegressor(
-        n_estimators=config["model"]["n_estimators"],
-        max_depth=config["model"]["max_depth"],
-        random_state=config["model"]["random_state"]
+        n_estimators=params["model"]["n_estimators"],
+        max_depth=params["model"]["max_depth"],
+        random_state=params["model"]["random_state"]
     )
 
     # 4️⃣ MLflow setup
-    mlflow.set_tracking_uri(config["mlflow"]["tracking_uri"])
-    mlflow.set_experiment(config["mlflow"]["experiment_name"])
+    mlflow.set_tracking_uri(params["mlflow"]["tracking_uri"])
+    mlflow.set_experiment(params["mlflow"]["experiment_name"])
 
     with mlflow.start_run(run_name="rf-training"):
 
@@ -59,14 +58,14 @@ def train():
         logger.info(f"✅ Model saved at: {model_path}")
 
         # 7️⃣ Log params
-        mlflow.log_param("n_estimators", config["model"]["n_estimators"])
-        mlflow.log_param("max_depth", config["model"]["max_depth"])
+        mlflow.log_param("n_estimators", params["model"]["n_estimators"])
+        mlflow.log_param("max_depth", params["model"]["max_depth"])
 
         # 8️⃣ Log model
         mlflow.sklearn.log_model(
             model,
             artifact_path="model",
-            registered_model_name=config["mlflow"]["registered_model_name"],
+            registered_model_name=params["mlflow"]["registered_model_name"],
             signature=signature,
             input_example=samples_input
 

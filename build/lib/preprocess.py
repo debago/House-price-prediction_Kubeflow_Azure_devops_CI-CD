@@ -1,7 +1,6 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from src.utils import load_config, load_data, save_data
-from src.config_loader import get_pipeline_config
+from src.utils import load_params, load_data, save_data
 import logging
 
 
@@ -11,12 +10,12 @@ logger = logging.getLogger(__name__)
 def preprocess():
     logger.info("Starting preprocessing")
     # 1️⃣ Load config
-    config = get_pipeline_config()
+    params = load_params()
 
-    raw_path = config["paths"]["raw_data"]
-    train_path = config["paths"]["train_data"]
-    test_path = config["paths"]["test_data"]
-    target_column = config["data"]["target_column"]
+    raw_path = params["paths"]["raw_data"]
+    train_path = params["paths"]["train_data"]
+    test_path = params["paths"]["test_data"]
+    target_column = params["data"]["target_column"]
 
     # 2️⃣ Load raw data
     df = load_data(raw_path)
@@ -29,8 +28,8 @@ def preprocess():
     X_train, X_test, y_train, y_test = train_test_split(
         X,
         y,
-        test_size=config["data"]["test_size"],
-        random_state=config["data"]["random_state"]
+        test_size=params["data"]["test_size"],
+        random_state=params["data"]["random_state"]
     )
 
     # 5️⃣ Recreate DataFrames
