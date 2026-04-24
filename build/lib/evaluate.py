@@ -2,16 +2,16 @@ import os
 import pickle
 import mlflow
 from sklearn.metrics import mean_absolute_error, r2_score, root_mean_squared_error, mean_squared_error
-from src.utils import load_config, load_data
-from src.config_loader import get_pipeline_config
+from src.utils import load_params, load_data
+
 
 def evaluate():
     # 1️⃣ Load config
-    config = get_pipeline_config()
+    params = load_params()
 
-    test_path = config["paths"]["test_data"]
-    model_dir = config["paths"]["model_dir"]
-    target_column = config["data"]["target_column"]
+    test_path = params["paths"]["test_data"]
+    model_dir = params["paths"]["model_dir"]
+    target_column = params["data"]["target_column"]
 
     model_path = os.path.join(model_dir, "model.pkl")
 
@@ -33,17 +33,15 @@ def evaluate():
     mse = mean_squared_error(y_test, preds)
     rmse = root_mean_squared_error(y_test, preds)
 
-
     print("📊 Metrics:")
     print(f"MAE: {mae}")
     print(f"MSE: {mse}")
     print(f"RMSE: {rmse}")
     print(f"R2: {r2}")
 
-
     # 6️⃣ Log metrics
-    mlflow.set_tracking_uri(config["mlflow"]["tracking_uri"])
-    mlflow.set_experiment(config["mlflow"]["experiment_name"])
+    mlflow.set_tracking_uri(params["mlflow"]["tracking_uri"])
+    mlflow.set_experiment(params["mlflow"]["experiment_name"])
 
     with mlflow.start_run(run_name="rf-evaluation"):
         mlflow.log_metric("mae", mae)
