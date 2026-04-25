@@ -17,7 +17,7 @@ def train():
 
     logger.info("Training started")
     # 1️⃣ Load config
-    config = get_pipeline_config()
+    config = get_pipeline_config("pipeline")
 
     train_path = config["paths"]["train_data"]
     model_dir = config["paths"]["model_dir"]
