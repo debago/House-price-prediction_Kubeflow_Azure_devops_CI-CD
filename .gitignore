@@ -26,5 +26,8 @@ great_expectations/uncommitted/
 
 # OpenAI API keys
 .openai_key
+<<<<<<< HEAD
 
 .env
+=======
+>>>>>>> 7a69217 (modified)
