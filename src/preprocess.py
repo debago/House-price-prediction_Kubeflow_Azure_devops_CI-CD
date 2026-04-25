@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 def preprocess():
     logger.info("Starting preprocessing")
     # 1️⃣ Load config
-    config = get_pipeline_config()
+    config = get_pipeline_config("pipeline")
 
     raw_path = config["paths"]["raw_data"]
     train_path = config["paths"]["train_data"]

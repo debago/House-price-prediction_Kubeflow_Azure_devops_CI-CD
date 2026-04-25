@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 def ingest_data():
     logger.info("Loading raw dataset")
     # params = load_params()
-    config = get_pipeline_config()
+    config = get_pipeline_config("pipeline")
     raw_data_path = config["paths"]["raw_data"]
 
     housing = fetch_california_housing(as_frame=True)
