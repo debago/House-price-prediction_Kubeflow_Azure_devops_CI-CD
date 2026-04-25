@@ -1,0 +1,20 @@
+DATASET: California Housing Dataset
+
+DESCRIPTION:
+This dataset contains information about housing in California districts.
+
+TARGET VARIABLE:
+- median_house_value
+
+FEATURES:
+- MedInc: Median income
+- HouseAge: Median house age
+- AveRooms: Average number of rooms
+- AveBedrms: Average number of bedrooms
+- Population: District population
+- AveOccup: Average house occupancy
+- Latitude: Location latitude
+- Longitude: Location longitude
+
+USE CASE:
+Predict housing prices based on socio-economic and geographical features.

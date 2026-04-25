@@ -1,0 +1,19 @@
+MODEL NAME: house-price-model
+
+DESCRIPTION:
+The model predicts median house value using regression.
+
+ALGORITHM:
+RandomForestRegressor (or your actual model)
+
+INPUT FEATURES:
+MedInc, HouseAge, AveRooms, AveBedrms, Population, AveOccup, Latitude, Longitude
+
+OUTPUT:
+Predicted median_house_value
+
+MODEL TRACKING:
+Tracked using MLflow
+
+MODEL REGISTRY:
+models:/house-price-model@latest

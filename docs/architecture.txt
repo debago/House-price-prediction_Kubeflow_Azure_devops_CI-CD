@@ -1,0 +1,13 @@
+SYSTEM ARCHITECTURE:
+
+Components:
+- FastAPI API service
+- MLflow tracking server
+- GenAI RAG module
+- Vector database (Chroma)
+
+FLOW:
+User → API → RAG → (Docs + MLflow) → Response
+
+RAG FUNCTION:
+Provides contextual answers using project documentation and MLflow data.

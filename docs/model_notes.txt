@@ -1,0 +1,9 @@
+The Iris model predicts flower species based on sepal length, sepal width, petal length, and petal width.
+
+The model is trained using scikit-learn and tracked with MLflow.
+
+The registered MLflow model name is iris-model.
+
+The FastAPI prediction endpoint is /predict.
+
+MLflow stores experiment metrics such as accuracy, precision, recall, and f1 score.

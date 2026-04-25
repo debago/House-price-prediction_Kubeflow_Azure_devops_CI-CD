@@ -1,0 +1,20 @@
+API DETAILS:
+
+Framework: FastAPI
+
+ENDPOINTS:
+
+/predict:
+- Method: POST
+- Input:
+  MedInc
+  HouseAge
+  AveRooms
+  AveBedrms
+  Population
+  AveOccup
+  Latitude
+  Longitude
+
+- Output:
+  predicted_house_price

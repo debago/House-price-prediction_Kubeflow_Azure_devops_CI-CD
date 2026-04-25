@@ -1,0 +1,17 @@
+MLFLOW USAGE:
+
+MLflow is used for:
+- Experiment tracking
+- Logging metrics and parameters
+- Model registry
+
+COMMON METRICS:
+- rmse
+- mae
+- r2_score
+
+LATEST MODEL:
+Retrieved using models:/house-price-model@latest
+
+RUN DETAILS:
+Each training run logs metrics and parameters for comparison.

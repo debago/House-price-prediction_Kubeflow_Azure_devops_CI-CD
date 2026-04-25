@@ -1,0 +1,17 @@
+TRAINING PIPELINE:
+
+Steps:
+1. Load California housing dataset
+2. Perform preprocessing (scaling, cleaning)
+3. Split into train/test
+4. Train regression model
+5. Evaluate using metrics
+6. Log results to MLflow
+
+METRICS:
+- RMSE (Root Mean Squared Error)
+- MAE (Mean Absolute Error)
+- R2 Score
+
+OUTPUT:
+Trained model registered in MLflow

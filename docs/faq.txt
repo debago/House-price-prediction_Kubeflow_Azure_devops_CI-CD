@@ -1,0 +1,14 @@
+Q: What is the model used?
+A: RandomForestRegressor
+
+Q: What metrics are tracked?
+A: RMSE, MAE, R2 Score
+
+Q: What is the target variable?
+A: median_house_value
+
+Q: How to get latest model?
+A: models:/house-price-model@latest
+
+Q: What is dataset used?
+A: California Housing Dataset

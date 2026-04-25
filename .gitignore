@@ -23,3 +23,6 @@ great_expectations/uncommitted/
 .idea/
 
 /data
+
+# OpenAI API keys
+.openai_key
