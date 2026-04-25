@@ -1,11 +1,14 @@
 import os
 import time
 import mlflow
-from src.utils import load_params
+from src.config_loader import get_pipeline_config
+
+
+config = get_pipeline_config("api")
 
 MODEL = None
 LAST_LOADED = 0
-REFRESH_INTERVAL = 60  # seconds
+REFRESH_INTERVAL = config["api"]["refresh_interval"]  # seconds
 
 
 def get_model_uri():
@@ -16,8 +19,8 @@ def get_model_uri():
         return model_uri
 
     # Fallback to params.yaml
-    params = load_params()
-    return params["mlflow"]["model_uri"]
+    config = get_pipeline_config("api")
+    return config["mlflow"]["model_uri"]
 
 def get_model(model_path: str):
     global MODEL, LAST_LOADED

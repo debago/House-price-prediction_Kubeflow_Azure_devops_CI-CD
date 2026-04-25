@@ -141,3 +141,15 @@ dvc init
 # Mlflow DB upgrade:
 
 mlflow db upgrade sqlite:///mlflow.db
+
+# Run Api:
+
+uvicorn api.app:app --reload
+
+set envirnment variable in powershell:
+
+$env:ENV = "dev"
+
+Read:
+
+echo $env:ENV
