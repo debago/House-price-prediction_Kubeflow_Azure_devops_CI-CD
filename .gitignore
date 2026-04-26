@@ -23,3 +23,5 @@ great_expectations/uncommitted/
 .idea/
 
 /data
+.env
+.openai_key
