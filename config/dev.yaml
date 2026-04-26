@@ -1,6 +1,3 @@
 mlflow:
   tracking_uri: http://localhost:5000
   model_uri: models:/house-price-model@dev
-
-api:
-  model_path: artifacts/models/model.pkl

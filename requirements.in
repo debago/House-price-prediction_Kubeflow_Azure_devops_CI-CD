@@ -4,7 +4,6 @@ scikit-learn
 pyyaml
 joblib
 mlflow
-<<<<<<< HEAD
 great_expectations
 
 # ----------------GENAI
@@ -20,6 +19,3 @@ python-dotenv
 # ------------Agentic AI
 crewai
 crewai-tools
-=======
-great_expectations
->>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
