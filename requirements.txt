@@ -7,11 +7,15 @@
 aiohappyeyeballs==2.6.1
     # via aiohttp
 aiohttp==3.13.5
+<<<<<<< HEAD
     # via
     #   instructor
     #   langchain-community
     #   litellm
     #   mlflow
+=======
+    # via mlflow
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 aiosignal==1.4.0
     # via aiohttp
 alembic==1.18.4
@@ -19,6 +23,7 @@ alembic==1.18.4
 altair==6.1.0
     # via great-expectations
 annotated-doc==0.0.4
+<<<<<<< HEAD
     # via
     #   fastapi
     #   typer
@@ -35,11 +40,19 @@ appdirs==1.4.4
     # via crewai
 asttokens==3.0.1
     # via stack-data
+=======
+    # via fastapi
+annotated-types==0.7.0
+    # via pydantic
+anyio==4.13.0
+    # via starlette
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 attrs==26.1.0
     # via
     #   aiohttp
     #   jsonschema
     #   referencing
+<<<<<<< HEAD
 bcrypt==5.0.0
     # via chromadb
 beautifulsoup4==4.14.3
@@ -50,11 +63,16 @@ blinker==1.9.0
     #   flask
 build==1.4.4
     # via chromadb
+=======
+blinker==1.9.0
+    # via flask
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 cachetools==7.0.6
     # via
     #   mlflow-skinny
     #   mlflow-tracing
 certifi==2026.4.22
+<<<<<<< HEAD
     # via
     #   httpcore
     #   httpx
@@ -78,11 +96,23 @@ click==8.3.3
     #   litellm
     #   mlflow-skinny
     #   typer
+=======
+    # via requests
+cffi==2.0.0
+    # via cryptography
+charset-normalizer==3.4.7
+    # via requests
+click==8.3.3
+    # via
+    #   flask
+    #   mlflow-skinny
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
     #   uvicorn
 cloudpickle==3.1.2
     # via mlflow-skinny
 colorama==0.4.6
     # via
+<<<<<<< HEAD
     #   build
     #   click
     #   ipython
@@ -98,18 +128,28 @@ crewai==0.193.2
     #   crewai-tools
 crewai-tools==0.76.0
     # via -r requirements.in
+=======
+    #   click
+    #   tqdm
+contourpy==1.3.3
+    # via matplotlib
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 cryptography==46.0.7
     # via
     #   google-auth
     #   great-expectations
     #   mlflow
+<<<<<<< HEAD
     #   pdfminer-six
+=======
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 cycler==0.12.1
     # via matplotlib
 databricks-sdk==0.105.0
     # via
     #   mlflow-skinny
     #   mlflow-tracing
+<<<<<<< HEAD
 dataclasses-json==0.6.7
     # via langchain-community
 decorator==5.2.1
@@ -138,32 +178,47 @@ fastapi==0.136.1
     # via mlflow-skinny
 filelock==3.29.0
     # via huggingface-hub
+=======
+docker==7.1.0
+    # via mlflow
+fastapi==0.136.1
+    # via mlflow-skinny
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 flask==3.1.3
     # via
     #   flask-cors
     #   mlflow
 flask-cors==6.0.2
     # via mlflow
+<<<<<<< HEAD
 flatbuffers==25.12.19
     # via onnxruntime
+=======
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 fonttools==4.62.1
     # via matplotlib
 frozenlist==1.8.0
     # via
     #   aiohttp
     #   aiosignal
+<<<<<<< HEAD
 fsspec==2026.3.0
     # via huggingface-hub
+=======
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 gitdb==4.0.12
     # via gitpython
 gitpython==3.1.47
     # via mlflow-skinny
 google-auth==2.49.2
     # via databricks-sdk
+<<<<<<< HEAD
 googleapis-common-protos==1.74.0
     # via
     #   opentelemetry-exporter-otlp-proto-grpc
     #   opentelemetry-exporter-otlp-proto-http
+=======
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 graphene==3.4.3
     # via mlflow
 graphql-core==3.2.8
@@ -176,6 +231,7 @@ great-expectations==1.17.0
     # via -r requirements.in
 greenlet==3.4.0
     # via sqlalchemy
+<<<<<<< HEAD
 grpcio==1.80.0
     # via
     #   chromadb
@@ -211,10 +267,20 @@ idna==3.13
     # via
     #   anyio
     #   httpx
+=======
+h11==0.16.0
+    # via uvicorn
+huey==2.6.0
+    # via mlflow
+idna==3.13
+    # via
+    #   anyio
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
     #   requests
     #   yarl
 importlib-metadata==8.7.1
     # via
+<<<<<<< HEAD
     #   litellm
     #   mlflow-skinny
     #   opentelemetry-api
@@ -230,11 +296,18 @@ itsdangerous==2.2.0
     # via flask
 jedi==0.19.2
     # via ipython
+=======
+    #   mlflow-skinny
+    #   opentelemetry-api
+itsdangerous==2.2.0
+    # via flask
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 jinja2==3.1.6
     # via
     #   altair
     #   flask
     #   great-expectations
+<<<<<<< HEAD
     #   instructor
     #   litellm
     #   pyvis
@@ -242,10 +315,13 @@ jiter==0.13.0
     # via
     #   instructor
     #   openai
+=======
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 joblib==1.5.3
     # via
     #   -r requirements.in
     #   scikit-learn
+<<<<<<< HEAD
 json-repair==0.25.2
     # via crewai
 json5==0.14.0
@@ -264,10 +340,17 @@ jsonschema==4.26.0
     #   chromadb
     #   great-expectations
     #   litellm
+=======
+jsonschema==4.26.0
+    # via
+    #   altair
+    #   great-expectations
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 jsonschema-specifications==2025.9.1
     # via jsonschema
 kiwisolver==1.5.0
     # via matplotlib
+<<<<<<< HEAD
 kubernetes==35.0.0
     # via chromadb
 lance-namespace==0.7.2
@@ -326,6 +409,10 @@ mako==1.3.11
     # via alembic
 markdown-it-py==4.0.0
     # via rich
+=======
+mako==1.3.11
+    # via alembic
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 markupsafe==3.0.3
     # via
     #   flask
@@ -333,6 +420,7 @@ markupsafe==3.0.3
     #   mako
     #   werkzeug
 marshmallow==3.26.2
+<<<<<<< HEAD
     # via
     #   dataclasses-json
     #   great-expectations
@@ -342,6 +430,11 @@ matplotlib-inline==0.2.1
     # via ipython
 mdurl==0.1.2
     # via markdown-it-py
+=======
+    # via great-expectations
+matplotlib==3.10.9
+    # via mlflow
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 mistune==3.2.0
     # via great-expectations
 mlflow==3.11.1
@@ -350,14 +443,18 @@ mlflow-skinny==3.11.1
     # via mlflow
 mlflow-tracing==3.11.1
     # via mlflow
+<<<<<<< HEAD
 mmh3==5.2.1
     # via chromadb
 mpmath==1.3.0
     # via sympy
+=======
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 multidict==6.7.1
     # via
     #   aiohttp
     #   yarl
+<<<<<<< HEAD
 mypy-extensions==1.1.0
     # via typing-inspect
 narwhals==2.20.0
@@ -376,10 +473,22 @@ numpy==2.4.4
     #   matplotlib
     #   mlflow
     #   onnxruntime
+=======
+narwhals==2.20.0
+    # via altair
+numpy==2.4.4
+    # via
+    #   -r requirements.in
+    #   contourpy
+    #   great-expectations
+    #   matplotlib
+    #   mlflow
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
     #   pandas
     #   scikit-learn
     #   scipy
     #   skops
+<<<<<<< HEAD
 oauthlib==3.3.1
     # via requests-oauthlib
 onnxruntime==1.22.0
@@ -412,10 +521,19 @@ opentelemetry-exporter-otlp-proto-grpc==1.41.1
     # via chromadb
 opentelemetry-exporter-otlp-proto-http==1.41.1
     # via crewai
+=======
+opentelemetry-api==1.41.1
+    # via
+    #   mlflow-skinny
+    #   mlflow-tracing
+    #   opentelemetry-sdk
+    #   opentelemetry-semantic-conventions
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 opentelemetry-proto==1.41.1
     # via
     #   mlflow-skinny
     #   mlflow-tracing
+<<<<<<< HEAD
     #   opentelemetry-exporter-otlp-proto-common
     #   opentelemetry-exporter-otlp-proto-grpc
     #   opentelemetry-exporter-otlp-proto-http
@@ -450,17 +568,33 @@ packaging==26.2
     #   lancedb
     #   langchain-core
     #   langsmith
+=======
+opentelemetry-sdk==1.41.1
+    # via
+    #   mlflow-skinny
+    #   mlflow-tracing
+opentelemetry-semantic-conventions==0.62b1
+    # via opentelemetry-sdk
+packaging==26.1
+    # via
+    #   altair
+    #   great-expectations
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
     #   marshmallow
     #   matplotlib
     #   mlflow-skinny
     #   mlflow-tracing
+<<<<<<< HEAD
     #   onnxruntime
+=======
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
     #   skops
 pandas==2.3.3
     # via
     #   -r requirements.in
     #   great-expectations
     #   mlflow
+<<<<<<< HEAD
 parso==0.8.6
     # via jedi
 pdfminer-six==20251230
@@ -477,6 +611,12 @@ prettytable==3.17.0
     # via skops
 prompt-toolkit==3.0.52
     # via ipython
+=======
+pillow==12.2.0
+    # via matplotlib
+prettytable==3.17.0
+    # via skops
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 propcache==0.4.1
     # via
     #   aiohttp
@@ -484,6 +624,7 @@ propcache==0.4.1
 protobuf==6.33.6
     # via
     #   databricks-sdk
+<<<<<<< HEAD
     #   googleapis-common-protos
     #   mlflow-skinny
     #   mlflow-tracing
@@ -497,16 +638,27 @@ pyarrow==23.0.1
     # via
     #   lancedb
     #   mlflow
+=======
+    #   mlflow-skinny
+    #   mlflow-tracing
+    #   opentelemetry-proto
+pyarrow==23.0.1
+    # via mlflow
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 pyasn1==0.6.3
     # via pyasn1-modules
 pyasn1-modules==0.4.2
     # via google-auth
+<<<<<<< HEAD
 pybase64==1.4.3
     # via chromadb
+=======
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 pycparser==3.0
     # via cffi
 pydantic==2.13.3
     # via
+<<<<<<< HEAD
     #   chromadb
     #   crewai
     #   fastapi
@@ -540,10 +692,19 @@ pygments==2.20.0
     #   rich
 pyjwt==2.12.1
     # via crewai
+=======
+    #   fastapi
+    #   great-expectations
+    #   mlflow-skinny
+    #   mlflow-tracing
+pydantic-core==2.46.3
+    # via pydantic
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 pyparsing==3.3.2
     # via
     #   great-expectations
     #   matplotlib
+<<<<<<< HEAD
 pypdf==6.10.2
     # via crewai-tools
 pypdfium2==5.7.1
@@ -554,10 +715,13 @@ pyproject-hooks==1.2.0
     # via build
 pyreadline3==3.5.4
     # via humanfriendly
+=======
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 python-dateutil==2.9.0.post0
     # via
     #   graphene
     #   great-expectations
+<<<<<<< HEAD
     #   kubernetes
     #   lance-namespace-urllib3-client
     #   matplotlib
@@ -593,10 +757,25 @@ pyyaml==6.0.3
     #   langchain-core
     #   mlflow-skinny
     #   uvicorn
+=======
+    #   matplotlib
+    #   pandas
+python-dotenv==1.2.2
+    # via mlflow-skinny
+pytz==2026.1.post1
+    # via pandas
+pywin32==311
+    # via docker
+pyyaml==6.0.3
+    # via
+    #   -r requirements.in
+    #   mlflow-skinny
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 referencing==0.37.0
     # via
     #   jsonschema
     #   jsonschema-specifications
+<<<<<<< HEAD
 regex==2026.4.4
     # via
     #   crewai
@@ -627,6 +806,14 @@ rich==14.3.4
     #   chromadb
     #   instructor
     #   typer
+=======
+requests==2.33.1
+    # via
+    #   databricks-sdk
+    #   docker
+    #   great-expectations
+    #   mlflow-skinny
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 rpds-py==0.30.0
     # via
     #   jsonschema
@@ -644,16 +831,22 @@ scipy==1.17.1
     #   mlflow
     #   scikit-learn
     #   skops
+<<<<<<< HEAD
 shellingham==1.5.4
     # via typer
 six==1.17.0
     # via
     #   kubernetes
     #   python-dateutil
+=======
+six==1.17.0
+    # via python-dateutil
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 skops==0.14.0
     # via mlflow
 smmap==5.0.3
     # via gitdb
+<<<<<<< HEAD
 sniffio==1.3.1
     # via
     #   openai
@@ -714,12 +907,27 @@ typer==0.24.2
     #   chromadb
     #   huggingface-hub
     #   instructor
+=======
+sqlalchemy==2.0.49
+    # via
+    #   alembic
+    #   mlflow
+sqlparse==0.5.5
+    # via mlflow-skinny
+starlette==1.0.0
+    # via fastapi
+threadpoolctl==3.6.0
+    # via scikit-learn
+tqdm==4.67.3
+    # via great-expectations
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 typing-extensions==4.15.0
     # via
     #   aiosignal
     #   alembic
     #   altair
     #   anyio
+<<<<<<< HEAD
     #   beautifulsoup4
     #   chromadb
     #   fastapi
@@ -736,10 +944,18 @@ typing-extensions==4.15.0
     #   opentelemetry-api
     #   opentelemetry-exporter-otlp-proto-grpc
     #   opentelemetry-exporter-otlp-proto-http
+=======
+    #   fastapi
+    #   graphene
+    #   great-expectations
+    #   mlflow-skinny
+    #   opentelemetry-api
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
     #   opentelemetry-sdk
     #   opentelemetry-semantic-conventions
     #   pydantic
     #   pydantic-core
+<<<<<<< HEAD
     #   python-docx
     #   referencing
     #   sqlalchemy
@@ -749,11 +965,20 @@ typing-extensions==4.15.0
     #   typing-inspection
 typing-inspect==0.9.0
     # via dataclasses-json
+=======
+    #   referencing
+    #   sqlalchemy
+    #   starlette
+    #   typing-inspection
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 typing-inspection==0.4.2
     # via
     #   fastapi
     #   pydantic
+<<<<<<< HEAD
     #   pydantic-settings
+=======
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 tzdata==2026.2
     # via
     #   pandas
@@ -763,6 +988,7 @@ tzlocal==5.3.1
 urllib3==2.6.3
     # via
     #   docker
+<<<<<<< HEAD
     #   kubernetes
     #   lance-namespace-urllib3-client
     #   requests
@@ -788,10 +1014,20 @@ websocket-client==1.9.0
     # via kubernetes
 websockets==16.0
     # via uvicorn
+=======
+    #   requests
+uvicorn==0.46.0
+    # via mlflow-skinny
+waitress==3.0.2
+    # via mlflow
+wcwidth==0.6.0
+    # via prettytable
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd
 werkzeug==3.1.8
     # via
     #   flask
     #   flask-cors
+<<<<<<< HEAD
 xxhash==3.7.0
     # via
     #   langgraph
@@ -804,3 +1040,9 @@ zipp==3.23.1
     # via importlib-metadata
 zstandard==0.25.0
     # via langsmith
+=======
+yarl==1.23.0
+    # via aiohttp
+zipp==3.23.1
+    # via importlib-metadata
+>>>>>>> 3cf9a29f91b1dccbafdd495945b94e37ac6f93cd

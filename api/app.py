@@ -59,11 +59,7 @@ def predict(data: HouseInput):
         df = pd.DataFrame([data.dict()])
 
         # Load model (with refresh logic)
-<<<<<<< HEAD
         model = get_model()
-=======
-        model = get_model(config["api"]["model_path"])
->>>>>>> 92560d5 (modified)
 
         # Perform inference
         preds = model.predict(df)
