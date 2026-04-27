@@ -1,6 +1,7 @@
 from crewai import Crew, Process
 from genai.agents.agents import rag_agent, mlflow_agent, analysis_agent
 from genai.tasks.tasks import rag_task, mlflow_task, analysis_task
+from genai.config import llm
 
 
 def run_crew(question: str):
@@ -20,6 +21,7 @@ def run_crew(question: str):
         agents=[r_agent, m_agent, a_agent],
         tasks=[t1, t2, t3],
         process=Process.sequential,
+        llm=llm,
         verbose=True
     )
 

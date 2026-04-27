@@ -3,7 +3,8 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from genai.rag.prompt_templates import RAG_PROMPT
 from genai.vector_store.vector_store_service import load_vector_store
-from genai.tools.mlflow_tool import get_latest_mlflow_run_summary
+from genai.services.mlflow_service import get_latest_mlflow_run_summary
+from genai.config import OPENAI_API_KEY, llm
 
 
 def ask_rag(question: str) -> str:
@@ -33,7 +34,8 @@ MLflow Live Context:
 
     llm = ChatOpenAI(
         model="gpt-4o-mini",
-        temperature=0
+        temperature=0,
+        api_key=OPENAI_API_KEY
     )
 
     chain = prompt | llm | StrOutputParser()

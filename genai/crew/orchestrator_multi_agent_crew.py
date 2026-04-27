@@ -46,6 +46,7 @@ def run_orchestrator_multi_agent_crew(question: str):
 
 
 if __name__ == "__main__":
-    question = "Explain the latest RMSE of the California house price model and what it means."
+    # question = "Explain the latest RMSE of the California house price model and what it means."
+    question = "what is the dataset used."
     result = run_orchestrator_multi_agent_crew(question)
     print(result)

@@ -1,5 +1,5 @@
 from crewai import Agent
-from genai.tools.tools import rag_tool
+from genai.tools.rag_tool import rag_tool
 
 
 def create_rag_agent():

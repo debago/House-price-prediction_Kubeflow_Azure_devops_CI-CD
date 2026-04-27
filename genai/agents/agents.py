@@ -1,5 +1,6 @@
 from crewai import Agent
-from genai.tools.tools import rag_tool, mlflow_tool
+from genai.tools.rag_tool import rag_tool
+from genai.tools.mlflow_tool import mlflow_latest_run_tool
 
 
 def rag_agent():
@@ -17,7 +18,7 @@ def mlflow_agent():
         role="MLflow Expert",
         goal="Provide latest model metrics",
         backstory="Expert in MLflow tracking and model performance",
-        tools=[mlflow_tool],
+        tools=[mlflow_latest_run_tool],
         verbose=True
     )
 
