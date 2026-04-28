@@ -52,6 +52,7 @@ def run_orchestrator(question: str):
 
 
 if __name__ == "__main__":
-    question = "Explain model performance and latest RMSE"
+    question = " what is RMSE"
     result = run_orchestrator(question)
     print(result)
+    print(f"Route selected: {route_question(question)}")

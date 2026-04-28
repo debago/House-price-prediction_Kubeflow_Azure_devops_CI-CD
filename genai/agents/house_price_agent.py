@@ -1,6 +1,5 @@
 from crewai import Agent, Task, Crew, Process
-from crewai.tools import tool
-
+from crewai import tool
 from genai.rag.rag_service import ask_rag
 from genai.tools.mlflow_tool import get_latest_mlflow_run_summary
 
