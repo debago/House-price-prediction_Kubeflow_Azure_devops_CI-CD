@@ -43,6 +43,15 @@ house-price-mlops/
 │   └── mlflow-service.yaml
 └── helm/
     └── house-price-api/
+    genai/
+├── graph/
+│   ├── __init__.py
+│   ├── state.py
+│   ├── router_node.py
+│   ├── rag_node.py
+│   ├── mlflow_node.py
+│   ├── analysis_node.py
+│   └── house_price_graph.py
 
 # Local env setup:
 

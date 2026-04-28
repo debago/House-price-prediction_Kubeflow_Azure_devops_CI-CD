@@ -19,3 +19,5 @@ python-dotenv
 # ------------Agentic AI
 crewai
 crewai-tools
+langgraph
+langchain-openai
