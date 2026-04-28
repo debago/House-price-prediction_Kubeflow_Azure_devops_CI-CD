@@ -47,7 +47,10 @@ def run_house_price_graph(question: str):
         "mlflow_answer": None,
         "final_answer": None
     })
-
+    
+    print("Selected route:", result["route"])
+    print("RAG answer:", result["rag_answer"])
+    print("MLflow answer:", result["mlflow_answer"])
     return result["final_answer"]
 
 
